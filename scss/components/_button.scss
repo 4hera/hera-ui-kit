@@ -13,25 +13,25 @@
   user-select: none;
 }
 
-.btn {
+.#{$prefix}btn {
   @include btn;
 }
 
 @each $key, $val in $colors {
-  .btn-#{$key} {
+  .#{$prefix}btn-#{$key} {
     @include btn($val);
     &:hover {
       background-color: lighten($val, 10);
     }
   }
-  .btn-outlined-#{$key} {
+  .#{$prefix}btn-outlined-#{$key} {
     @include btn(#fff);
     border: $base-border-thickness solid $val;
     &:hover {
       background-color: $val;
     }
   }
-  .btn-complement-#{$key} {
+  .#{$prefix}btn-complement-#{$key} {
     @include btn($val);
     color: light-comp($val);
     &:hover {
