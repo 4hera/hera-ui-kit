@@ -1,0 +1,19 @@
+@mixin badge($bg-color: $primary) {
+    text-decoration: none;
+    display: inline-block;
+    border: 0;
+    padding: $base-padding $base-padding;
+    border-radius: $base-border-radius/4;
+    color: white;
+    background-color: $bg-color;
+  }
+  
+  .#{$prefix}badge {
+    @include badge;
+  }
+  
+  @each $key, $val in $colors {
+    .#{$prefix}badge-#{$key} {
+      @include badge($val);
+    }
+  }

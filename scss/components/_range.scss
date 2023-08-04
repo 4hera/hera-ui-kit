@@ -1,0 +1,9 @@
+.#{$prefix}range{
+    accent-color: $primary;
+}
+
+@each $key, $val in $colors {
+    .#{$prefix}range-#{$key} {
+        accent-color: $val;
+    }
+}

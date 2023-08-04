@@ -1,0 +1,21 @@
+
+@mixin alert($bg-color: $primary) {
+    text-decoration: none;
+    display: inline-block;
+    border: 0;
+    padding: $base-padding*2 $base-padding;
+    border-radius: $base-border-radius/4;
+    color: mix(black, $bg-color, 60);
+    background-color: rgba($color: $bg-color, $alpha: 0.4);
+    width: 100%;
+  }
+  
+  .#{$prefix}alert {
+    @include alert;
+  }
+  
+  @each $key, $val in $colors {
+    .#{$prefix}alert-#{$key} {
+      @include alert($val);
+    }
+  }

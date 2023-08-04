@@ -1,0 +1,9 @@
+.#{$prefix}checkbox{
+    accent-color: $primary;
+}
+
+@each $key, $val in $colors {
+    .#{$prefix}checkbox-#{$key} {
+        accent-color: $val;
+    }
+}

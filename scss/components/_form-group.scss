@@ -1,0 +1,23 @@
+.form-group{
+    display: flex;
+    flex-direction: column;
+
+    label{
+        margin-bottom: $base-margin;
+    }
+
+    input{
+        margin-bottom: $base-margin;
+    }
+
+}
+
+
+.form-check{
+    display: flex;
+    flex-direction: row;
+}
+
+.form-check-input{
+    margin-right: $base-margin;
+}

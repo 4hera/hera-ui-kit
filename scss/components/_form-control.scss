@@ -1,0 +1,94 @@
+@mixin form-control() {
+    display: block;
+    border: $base-border-thickness*2 solid #ddd;
+    width: 100%;
+    padding: $base-padding $base-padding * 2;
+    border-radius: $base-border-radius/4;
+    transition: background-color 0.3s ease;
+    transition: border 0.3s ease; 
+    transition: box-shadow 0.3s ease; 
+    textarea{
+      height: 200px;
+    }
+  }
+
+.#{$prefix}form-control{
+  @include form-control;
+  &:focus-visible{
+    border-right : 1px solid rgba($primary, 0.7) !important;
+    border : 2px solid rgba($primary, 0.7);
+    outline: 0px;
+    box-shadow:  0 0 1px 4px rgba($primary, 0.3) ;
+  }
+}
+
+.#{$prefix}form-control-lg{
+  @include form-control;
+  height: $font-size-lg*3;
+  font-size: $font-size-lg;
+  &:focus-visible{
+    border-right : 1px solid rgba($primary, 0.7) !important;
+    border : 2px solid rgba($primary, 0.7);
+    outline: 0px;
+    box-shadow:  0 0 1px 4px rgba($primary, 0.3) ;
+  }
+}
+
+.#{$prefix}form-control-sm{
+  @include form-control;
+  height: $font-size-sm;
+  font-size: $font-size-sm;
+  &:focus-visible{
+    border-right : 1px solid rgba($primary, 0.7) !important;
+    border : 2px solid rgba($primary, 0.7);
+    outline: 0px;
+    box-shadow:  0 0 1px 4px rgba($primary, 0.3) ;
+  }
+}
+
+@each $key, $val in $colors {
+  .#{$prefix}form-control-#{$key}{
+      @include form-control;
+      &:focus-visible{
+        border-right : 1px solid rgba($val, 0.7) !important;
+        border : 2px solid rgba($val, 0.7);
+        outline: 0px;
+        box-shadow:  0 0 1px 4px rgba($val, 0.3) ;
+      }
+  }
+
+  .#{$prefix}form-control-#{$key}-sm{
+      height: $font-size-sm;
+      font-size: $font-size-sm;
+      @include form-control;
+      &:focus-visible{
+        border : 2px solid rgba($val, 0.7);
+        outline: 0px;
+        box-shadow:  0 0 1px 4px rgba($val, 0.3) ;
+      }
+  }
+
+  .#{$prefix}form-control-#{$key}-lg{
+    height: $font-size-lg*3;
+    font-size: $font-size-lg;
+    @include form-control;
+    &:focus-visible{
+      border : 2px solid rgba($val, 0.7);
+      outline: 0px;
+      box-shadow:  0 0 1px 4px rgba($val, 0.3) ;
+    }
+}
+}
+
+.#{$prefix}form-control-file{
+  border-radius: 4px;
+  height: 40px;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+  margin-right: 16px;
+  transition: background-color 200ms;
+  padding: 7px;
+  width: 100%;
+}
