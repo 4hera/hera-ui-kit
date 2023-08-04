@@ -1,0 +1,28 @@
+@mixin form-control-file() {
+    width: 100%;
+    border: $base-border-thickness*2 solid #ddd;
+    border-radius: $base-border-radius/4;
+    height: 45px;
+    cursor: pointer;
+    &::-webkit-file-upload-button{
+      cursor: pointer;
+      height: 100%;
+      border: none;
+      border-right: $base-border-thickness*2 solid #ddd;
+      background-color: $primary;
+      padding: 0 15px;
+    }
+}
+
+.form-control-file{
+    @include form-control-file;
+}
+
+@each $key, $val in $colors {
+    .#{$prefix}form-control-file-#{$key}{
+        @include form-control-file;
+        &::-webkit-file-upload-button{
+            background-color: $val;
+        }
+    }
+}

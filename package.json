@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o css/ --recursive",
+    "sass": "node-sass -w scss/ -o www/css/ --recursive",
     "min-sass": "node-sass -w scss/ -o css/min/ --output-style compressed",
     "build": "node-sass  scss/ -o dist/css/ --output-style compressed"
   },
