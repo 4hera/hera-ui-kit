@@ -5,6 +5,10 @@
     font-size: 16px;
     border: none;
     cursor: pointer;
+
+    span::after{
+      content: "  ⮟";
+    }
   }
   
   
@@ -53,5 +57,9 @@
         border: none;
         cursor: pointer;
         user-select: none;
+
+          span::after{
+            content: "  ⮟";
+          }
     }
   }
