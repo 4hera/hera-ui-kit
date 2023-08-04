@@ -1,3 +1,4 @@
+@debug $colors;
 @each $key, $val in $colors {
     .text-#{$key} {
       color: $val;
@@ -15,7 +16,7 @@
       }
   
     // light variations
-    @if ($val != black and $val != white) {
+   
         @for $i from 1 through 5 {
         .text-#{$key}-light-#{$i} {
             color: mix(white, $val, $i * 10);
@@ -44,5 +45,5 @@
             background-color: mix(black, $val, $i * 10);
         }
         }
-    }
+    
   }
