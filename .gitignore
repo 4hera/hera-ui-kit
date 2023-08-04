@@ -3,6 +3,7 @@
 *.sass.map
 *.scss.map
 
+www/
 dist/
 css/
 js/
