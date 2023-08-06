@@ -1,4 +1,8 @@
-.#{$prefix}drop-btn {
+.#{$prefix}dropdown {
+  position: relative;
+  display: inline-block;
+
+  .#{$prefix}drop-btn {
     background-color: $primary;
     color: white;
     padding: 16px;
@@ -6,60 +10,112 @@
     border: none;
     cursor: pointer;
 
-    span::after{
+    span{
+      pointer-events: none;
+    }
+    span::after {
       content: "  ⮟";
     }
   }
-  
-  
-  .#{$prefix}dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
+
 
   .#{$prefix}dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-  }
-  
 
-  .#{$prefix}dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
+    a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
 
-  .#{$prefix}dropdown-content a:hover {background-color: #f1f1f1}
-  
-
-  .#{$prefix}dropdown:hover .#{$prefix}dropdown-content {
-    display: block;
-  }
-
-  .#{$prefix}dropdown:hover .#{$prefix}drop-btn {
-    filter: brightness(0.90);
-  }
-
-
-  @each $key, $val in $colors {
-    .#{$prefix}drop-btn-#{$key} {
-        background-color: $val;
-        color: white;
-        padding: 16px;
-        font-size: 16px;
-        border: none;
-        cursor: pointer;
-        user-select: none;
-
-          span::after{
-            content: "  ⮟";
-          }
+    &:hover {
+      background-color: #f1f1f1;
     }
   }
+
+
+  &:hover{
+    .#{$prefix}dropdown-content {
+      display: block;
+    }
+
+    .#{$prefix}drop-btn {
+      filter: brightness(0.90);
+    }
+  }
+}
+
+
+.#{$prefix}dropdown-click {
+  position: relative;
+  display: inline-block;
+
+  .#{$prefix}drop-btn {
+    background-color: $primary;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    span{
+      pointer-events: none;
+    }
+    span::after {
+      content: "  ⮟";
+    }
+  }
+
+
+  .#{$prefix}dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+
+    a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    &:hover {
+      background-color: #f1f1f1;
+    }
+  }
+
+
+  &:hover{
+    .#{$prefix}drop-btn {
+      filter: brightness(0.90);
+    }
+  }
+}
+
+
+@each $key,
+$val in $colors {
+  .#{$prefix}drop-btn-#{$key} {
+    background-color: $val;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    span{
+      pointer-events: none;
+    }
+    span::after {
+      content: "  ⮟";
+    }
+  }
+}
