@@ -22,6 +22,6 @@ Give a ⭐️ if this project helped you!
 
 <!-- NucBot -->
 
-<table><tr><td align="center"><a href="https://github.com/4hera"><img src="https://avatars.githubusercontent.com/u/130228897?v=4" width="100px;" alt="User NucBot"/><br/><sub>4HERA</sub></a></td><td align="center"><a href="https://github.com/emirercan"><img src="https://avatars.githubusercontent.com/u/105988553?v=4" width="100px;" alt="User canmingir"/><br/><sub>emirercan</sub></a></td></table>
+<table><tr><td align="center"><a href="https://github.com/4hera"><img src="https://avatars.githubusercontent.com/u/130228897?v=4" width="100px;" alt="User NucBot"/><br/><sub>4HERA</sub></a></td><td align="center"><a href="https://github.com/emirercan"><img src="https://avatars.githubusercontent.com/u/105988553?v=4" width="100px;" alt="User canmingir"/><br/><sub>emirercan</sub></a></td><td align="center"><a href="https://github.com/brokolililer"><img src="https://avatars.githubusercontent.com/u/41168623?v=4" width="100px;" alt="User canmingir"/><br/><sub>brokolililer</sub></a></td></table>
 
 <br/>
