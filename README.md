@@ -13,6 +13,14 @@ npm install
 npm run build
 ```
 
+## How to use
+
+Preferred way of using Hera-UI-Kit is using it via CDN. Just import library CSS file to your main document like below:
+
+```html
+<link rel="stylesheet" href="https://cdn.4hera.com/static/css/hera-ui-kit.css" />
+```
+
 ## Show your support
 
 Give a ⭐️ if this project helped you!
