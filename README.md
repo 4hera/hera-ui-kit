@@ -10,6 +10,7 @@
 
 ```sh
 npm install
+npm run build
 ```
 
 ## Show your support
