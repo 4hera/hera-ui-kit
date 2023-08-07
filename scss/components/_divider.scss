@@ -1,17 +1,56 @@
-.divider{
+
+@mixin divider($color: $primary) {
     display: block;
     text-align: center;
     overflow: hidden;
     white-space: nowrap;
-
+    margin: 1rem 0;
+  
+    // divider text display prop
+  
     .divider-text {
-        position: relative;
-        display: inline-block;
-        font-size: .9375rem;
-        padding: 0 1rem;
-        
-        ::after{
-            content: "--------";
-        }
+      position: relative;
+      display: inline-block;
+      font-size: 0.9375rem;
+      padding: 0 1rem;
+  
+      // divider icon font size
+  
+      i,
+      svg {
+        height: 1rem;
+        width: 1rem;
+        font-size: 1rem;
+      }
+  
+      // divider border
+  
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 9999px;
+        border-top: 1px solid $color;
+      }
+  
+      // divider spacing
+      &:before {
+        right: 100%;
+      }
+  
+      &:after {
+        left: 100%;
+      }
     }
+}  
+
+.#{$prefix}divider{
+    @include divider;
 }
+
+@each $key, $val in $colors {
+    .#{$prefix}divider-#{$key} {
+      @include divider($val);
+    }
+  }
