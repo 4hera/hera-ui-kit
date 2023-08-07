@@ -1,0 +1,17 @@
+.divider{
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+
+    .divider-text {
+        position: relative;
+        display: inline-block;
+        font-size: .9375rem;
+        padding: 0 1rem;
+        
+        ::after{
+            content: "--------";
+        }
+    }
+}

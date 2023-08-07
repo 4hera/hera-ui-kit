@@ -530,6 +530,14 @@ $utilities: (
       "visible": visible,
       "hidden": hidden,
     )
+  ),
+  "font-family": (
+    "prefix": "ff",
+    "values": (
+      "thin": $font-thin,
+      "regular": $font-regular,
+      "light": $font-light,
+    )
   )
 );
 
