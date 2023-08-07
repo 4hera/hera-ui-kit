@@ -41,7 +41,7 @@
   }
 }
 
-.disabled {
+.#{$prefix}disabled {
   pointer-events: none;
   user-select: none;
   cursor: not-allowed;

@@ -14,13 +14,13 @@
     }
 }
 
-.form-control-file{
+.#{$prefix}form-control-file{
     @include form-control-file;
 }
 
 @each $key, $val in $colors {
     .#{$prefix}form-control-file-#{$key}{
-        @include form-control-file;
+        @include form-control-file;s
         &::-webkit-file-upload-button{
             background-color: $val;
         }

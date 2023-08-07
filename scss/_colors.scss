@@ -1,47 +1,47 @@
 
 @each $key, $val in $colors {
-    .text-#{$key} {
+    .#{$prefix}text-#{$key} {
       color: $val;
     }
-    .bg-#{$key} {
+    .#{$prefix}bg-#{$key} {
       background-color: $val;
     }
-    .text-hover-#{$key} {
+    .#{$prefix}text-hover-#{$key} {
         &:hover {
           color: $val;
         }
       }
-      .bg-#{$key} {
+      .#{$prefix}bg-#{$key} {
         background-color: $val;
       }
   
     // light variations
    
         @for $i from 1 through 5 {
-        .text-#{$key}-light-#{$i} {
+        .#{$prefix}text-#{$key}-light-#{$i} {
             color: mix(white, $val, $i * 10);
         }
-        .text-hover-#{$key}-light-#{$i} {
+        .#{$prefix}text-hover-#{$key}-light-#{$i} {
             &:hover {
               color: mix(white, $val, $i * 10);
             }
           }
-        .bg-#{$key}-light-#{$i} {
+        .#{$prefix}bg-#{$key}-light-#{$i} {
             background-color: mix(white, $val, $i * 10);
         }
         }
     
         // dark variations
         @for $i from 1 through 5 {
-        .text-#{$key}-dark-#{$i} {
+        .#{$prefix}text-#{$key}-dark-#{$i} {
             color: mix(black, $val, $i * 10);
         }
-        .text-hover-#{$key}-dark-#{$i} {
+        .#{$prefix}text-hover-#{$key}-dark-#{$i} {
             &:hover {
               color: mix(black, $val, $i * 10);
             }
           }
-        .bg-#{$key}-dark-#{$i} {
+        .#{$prefix}bg-#{$key}-dark-#{$i} {
             background-color: mix(black, $val, $i * 10);
         }
         }

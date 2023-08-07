@@ -2,7 +2,7 @@
 
 $utilities: (
   "padding": (
-    "prefix": "p",
+    "prefix": "#{$prefix}p",
     "values": (
       "0": 0,
       "1": $base-padding,
@@ -13,7 +13,7 @@ $utilities: (
     ),
   ),
   "padding-left": (
-    "prefix": "pl",
+    "prefix": "#{$prefix}pl",
     "values": (
       "0": 0,
       "1": $base-padding,
@@ -24,7 +24,7 @@ $utilities: (
     ),
   ),
   "padding-right": (
-    "prefix": "pr",
+    "prefix": "#{$prefix}pr",
     "values": (
       "0": 0,
       "1": $base-padding,
@@ -35,7 +35,7 @@ $utilities: (
     ),
   ),
   "padding-top": (
-    "prefix": "pt",
+    "prefix": "#{$prefix}pt",
     "values": (
       "0": 0,
       "1": $base-padding,
@@ -46,7 +46,7 @@ $utilities: (
     ),
   ),
   "padding-bottom": (
-    "prefix": "pb",
+    "prefix": "#{$prefix}pb",
     "values": (
       "0": 0,
       "1": $base-padding,
@@ -57,7 +57,7 @@ $utilities: (
     ),
   ),
   "margin": (
-    "prefix": "m",
+    "prefix": "#{$prefix}m",
     "values": (
       "0": 0,
       "1": $base-margin,
@@ -68,7 +68,7 @@ $utilities: (
     ),
   ),
   "margin-left": (
-    "prefix": "ml",
+    "prefix": "#{$prefix}ml",
     "values": (
       "0": 0,
       "1": $base-margin,
@@ -79,7 +79,7 @@ $utilities: (
     ),
   ),
   "margin-right": (
-    "prefix": "mr",
+    "prefix": "#{$prefix}mr",
     "values": (
       "0": 0,
       "1": $base-margin,
@@ -90,7 +90,7 @@ $utilities: (
     ),
   ),
   "margin-top": (
-    "prefix": "mt",
+    "prefix": "#{$prefix}mt",
     "values": (
       "0": 0,
       "1": $base-margin,
@@ -101,7 +101,7 @@ $utilities: (
     ),
   ),
   "margin-bottom": (
-    "prefix": "mb",
+    "prefix": "#{$prefix}mb",
     "values": (
       "0": 0,
       "1": $base-margin,
@@ -112,7 +112,7 @@ $utilities: (
     ),
   ),
   "opacity": (
-    "prefix": "o",
+    "prefix": "#{$prefix}o",
     "values": (
       "10": 0.1,
       "20": 0.2,
@@ -127,7 +127,7 @@ $utilities: (
     ),
   ),
   "border": (
-    "prefix": "border",
+    "prefix": "#{$prefix}border",
     "values": (
       "primary-1":$base-border-thickness solid $primary,
       "primary-2":$base-border-thickness*2 solid $primary,
@@ -197,7 +197,7 @@ $utilities: (
     ),
   ),
   "border-right": (
-    "prefix": "border-right",
+    "prefix": "#{$prefix}border-right",
     "values": (
       "primary-1":$base-border-thickness solid $primary,
       "primary-2":$base-border-thickness*2 solid $primary,
@@ -267,7 +267,7 @@ $utilities: (
     ),
   ),
   "border-left": (
-    "prefix": "border-left",
+    "prefix": "#{$prefix}border-left",
     "values": (
       "primary-1":$base-border-thickness solid $primary,
       "primary-2":$base-border-thickness*2 solid $primary,
@@ -337,7 +337,7 @@ $utilities: (
     ),
   ),
   "border-top": (
-    "prefix": "border-top",
+    "prefix": "#{$prefix}border-top",
     "values": (
       "primary-1":$base-border-thickness solid $primary,
       "primary-2":$base-border-thickness*2 solid $primary,
@@ -407,7 +407,7 @@ $utilities: (
     ),
   ),
   "border-bottom": (
-    "prefix": "border-bottom",
+    "prefix": "#{$prefix}border-bottom",
     "values": (
       "primary-1":$base-border-thickness solid $primary,
       "primary-2":$base-border-thickness*2 solid $primary,
@@ -477,7 +477,7 @@ $utilities: (
     ),
   ),
   "border-radius": (
-    "prefix": "br",
+    "prefix": "#{$prefix}br",
     "values": (
       "default": $base-border-radius,
       "none": 0,
@@ -488,7 +488,7 @@ $utilities: (
     )
   ),
   "display": (
-    "prefix": "display",
+    "prefix": "#{$prefix}display",
     "values": (
       "n": none,
       "b": block,
@@ -498,7 +498,7 @@ $utilities: (
     )
   ),
   "width": (
-    "prefix": "w",
+    "prefix": "#{$prefix}w",
     "values": (
       "25": 25%,
       "50": 50%,
@@ -507,7 +507,7 @@ $utilities: (
     )
   ),
   "font-size": (
-    "prefix": "font",
+    "prefix": "#{$prefix}font",
     "values": (
       "sm": $font-size-sm,
       "md": $base-font-size,
@@ -517,7 +517,7 @@ $utilities: (
     )
   ),
   "text-align": (
-    "prefix": "text-align",
+    "prefix": "#{$prefix}text-align",
     "values": (
       "center": center,
       "left": left,
@@ -525,14 +525,14 @@ $utilities: (
     )
   ),
   "visibility": (
-    "prefix": "v",
+    "prefix": "#{$prefix}v",
     "values": (
       "visible": visible,
       "hidden": hidden,
     )
   ),
   "font-family": (
-    "prefix": "ff",
+    "prefix": "#{$prefix}ff",
     "values": (
       "thin": $font-thin,
       "regular": $font-regular,
@@ -543,16 +543,16 @@ $utilities: (
 
 // generate utility classes
 @each $property, $map in $utilities {
-  $prefix: map-get($map, "prefix");
+  $pre: map-get($map, "prefix");
   $values: map-get($map, "values");
 
   @each $k, $v in $values {
     @if($k == "default") {
-      .#{$prefix} {
+      .#{$pre} {
         #{$property}: $v;
       }
     } @else {
-      .#{$prefix}-#{$k}{
+      .#{$pre}-#{$k}{
         #{$property}: $v;
       }
     }

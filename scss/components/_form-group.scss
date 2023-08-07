@@ -1,4 +1,4 @@
-.form-group{
+.#{$prefix}form-group{
     display: flex;
     flex-direction: column;
 
@@ -13,11 +13,11 @@
 }
 
 
-.form-check{
+.#{$prefix}form-check{
     display: flex;
     flex-direction: row;
 }
 
-.form-check-input{
+.#{$prefix}form-check-input{
     margin-right: $base-margin;
 }

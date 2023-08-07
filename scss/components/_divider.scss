@@ -8,7 +8,7 @@
   
     // divider text display prop
   
-    .divider-text {
+    .#{$prefix}divider-text {
       position: relative;
       display: inline-block;
       font-size: 0.9375rem;
@@ -53,4 +53,5 @@
     .#{$prefix}divider-#{$key} {
       @include divider($val);
     }
-  }
+}
+
