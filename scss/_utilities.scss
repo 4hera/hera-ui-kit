@@ -497,6 +497,15 @@ $utilities: (
       "i-b": inline-block
     )
   ),
+  "flex-direction": (
+    "prefix": "#{$prefix}fd",
+    "values": (
+      "row": row,
+      "column": column,
+      "row-reverse": row-reverse,
+      "column-reverse": column-reverse,
+    )
+  ),
   "width": (
     "prefix": "#{$prefix}w",
     "values": (
