@@ -28,5 +28,9 @@
       border-top: $base-border-thickness solid #ddd;
       background-color: mix(black, white, 5);;
     }
+
+    img{
+      max-width: 90%;
+    }
   }
   

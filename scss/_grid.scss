@@ -12,11 +12,42 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
 // base layout classes
 .#{$prefix}container {
   width: 100%;
-  max-width: 1200px;
+  max-width: map-get($breakpoints, "xl");
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
 }
+.#{$prefix}container-lg {
+  width: 100%;
+  max-width: map-get($breakpoints, "lg");
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.#{$prefix}container-md {
+  width: 100%;
+  max-width: map-get($breakpoints, "md");
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.#{$prefix}container-sm {
+  width: 100%;
+  max-width: map-get($breakpoints, "sm");
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.#{$prefix}container-xs {
+  width: 100%;
+  max-width: map-get($breakpoints, "xs");
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+
 .#{$prefix}row {
   display: flex;
   flex-flow: row wrap;
