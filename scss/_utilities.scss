@@ -506,6 +506,16 @@ $utilities: (
       "column-reverse": column-reverse,
     )
   ),
+  "overflow": (
+    "prefix": "#{$prefix}overflow",
+    "values": (
+      "visible": visible,
+      "hidden": hidden,
+      "clip": clip,
+      "scroll": scroll,
+      "auto": auto,
+    )
+  ),
   "width": (
     "prefix": "#{$prefix}w",
     "values": (
