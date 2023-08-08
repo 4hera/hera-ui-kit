@@ -1,5 +1,4 @@
 
-
 $utilities: (
   "padding": (
     "prefix": "#{$prefix}p",
@@ -568,11 +567,11 @@ $utilities: (
   @each $k, $v in $values {
     @if($k == "default") {
       .#{$pre} {
-        #{$property}: $v;
+        #{$property}: $v !important;
       }
     } @else {
       .#{$pre}-#{$k}{
-        #{$property}: $v;
+        #{$property}: $v !important;
       }
     }
   }
