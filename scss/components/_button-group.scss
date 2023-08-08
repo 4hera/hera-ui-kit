@@ -7,14 +7,14 @@
         border-radius: $base-border-radius/4;
     }
     :not(:first-child):not(:last-child) {
-        border-right: none;
+        border-right: 1px solid rgba($color: $gray, $alpha: 0.6);
         border-radius: 0;
     }
 
     :first-child{
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
-        border-right: none;
+        border-right: 1px solid rgba($color: $gray, $alpha: 0.6);
     }
 
     :last-child{
