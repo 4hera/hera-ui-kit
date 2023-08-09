@@ -1,9 +1,9 @@
 //variables
 @import './_variables.scss';
 @import './base/_fonts.scss';
-@import './functions.scss';
+@import './_functions.scss';
 //base
-@import './base/normalize.scss';
+@import './base/_normalize.scss';
 @import './_breakpoints.scss';
 @import './_grid.scss';
 //colors
@@ -18,11 +18,11 @@
 @import './components/_form-group.scss';
 @import './components/_dropdown.scss';
 @import './components/_modal.scss';
-@import './components/switch.scss';
-@import './components/checkbox';
+@import './components/_switch.scss';
+@import './components/_checkbox';
 @import './components/_alert.scss';
 @import './components/_range.scss';
 @import './components/_form-control-file.scss';
 @import './components/_divider.scss';
 //utilities
-@import 'utilities';
+@import '_utilities';

@@ -14,7 +14,7 @@
       pointer-events: none;
     }
     span::after {
-      content: "  ⮟";
+      content: "  ▼";
     }
   }
 
@@ -67,7 +67,7 @@
       pointer-events: none;
     }
     span::after {
-      content: "  ⮟";
+      content: "  ▼";
     }
   }
 
@@ -115,7 +115,7 @@ $val in $colors {
       pointer-events: none;
     }
     span::after {
-      content: "  ⮟";
+      content: "  ▼";
     }
   }
 }
