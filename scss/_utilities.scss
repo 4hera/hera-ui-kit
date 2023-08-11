@@ -555,6 +555,35 @@ $utilities: (
       "column-reverse": column-reverse,
     )
   ),
+  "flex-wrap": (
+    "prefix": "#{$prefix}fw",
+    "values": (
+      "wrap": wrap,
+      "nowrap": nowrap,
+      "wrap-reverse": wrap-reverse,
+    )
+  ),
+  "align-items": (
+    "prefix": "#{$prefix}align-items",
+    "values": (
+      "center": center,
+      "stretch": stretch,
+      "start": start,
+      "end": end,
+    )
+  ),
+  "justify-content": (
+    "prefix": "#{$prefix}justify-content",
+    "values": (
+      "center": center,
+      "space-between": space-between,
+      "start": start,
+      "space-around": space-around,
+      "space-evenly": space-evenly,
+      "flex-start": flex-start,
+      "flex-end": flex-end,
+    )
+  ),
   "overflow": (
     "prefix": "#{$prefix}overflow",
     "values": (
@@ -567,6 +596,15 @@ $utilities: (
   ),
   "width": (
     "prefix": "#{$prefix}w",
+    "values": (
+      "25": 25%,
+      "50": 50%,
+      "75": 75%,
+      "100": 100%,
+    )
+  ),
+  "height": (
+    "prefix": "#{$prefix}h",
     "values": (
       "25": 25%,
       "50": 50%,
@@ -599,6 +637,12 @@ $utilities: (
       "hidden": hidden,
     )
   ),
+  "user-select": (
+    "prefix": "#{$prefix}us",
+    "values": (
+      "none": none,
+    )
+  ),
   "font-family": (
     "prefix": "#{$prefix}ff",
     "values": (
@@ -608,6 +652,9 @@ $utilities: (
     )
   )
 );
+
+
+
 
 // generate utility classes
 @each $property, $map in $utilities {

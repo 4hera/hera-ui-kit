@@ -10,6 +10,13 @@ $grid-gaps: (
 $layout-values: flex-start, flex-end, center, space-between, space-around;
 
 // base layout classes
+.#{$prefix}container-xxl {
+  width: 100%;
+  max-width: map-get($breakpoints, "xxl");
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
 .#{$prefix}container {
   width: 100%;
   max-width: map-get($breakpoints, "xl");
