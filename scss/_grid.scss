@@ -7,8 +7,10 @@ $grid-gaps: (
   "2": 20px,
   "3": 30px,
 );
-$layout-values: flex-start, flex-end, center, space-between, space-around;
-
+$justify-values: flex-start, flex-end, center, space-between, space-evenly, space-around;
+$align-values: flex-start, flex-end, center, stretch, baseline, start, end;
+$flex-direction-values: row, column, row-reverse, column-reverse;
+$flex-wrap-values: wrap, nowrap, wrap-reverse;
 // base layout classes
 .#{$prefix}container-xxl {
   width: 100%;
@@ -72,9 +74,27 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
 }
 
 // justify content classes
-@each $val in $layout-values {
+@each $val in $justify-values {
   .#{$prefix}justify-#{$val} {
     justify-content: $val;
+  }
+}
+
+@each $val in $align-values {
+  .#{$prefix}align-#{$val} {
+    align-items: $val;
+  }
+}
+
+@each $val in $flex-direction-values {
+  .#{$prefix}fd-#{$val} {
+    flex-direction: $val;
+  }
+}
+
+@each $val in $flex-wrap-values {
+  .#{$prefix}fw-#{$val} {
+    flex-wrap: $val;
   }
 }
 

@@ -546,44 +546,6 @@ $utilities: (
       "i-b": inline-block
     )
   ),
-  "flex-direction": (
-    "prefix": "#{$prefix}fd",
-    "values": (
-      "row": row,
-      "column": column,
-      "row-reverse": row-reverse,
-      "column-reverse": column-reverse,
-    )
-  ),
-  "flex-wrap": (
-    "prefix": "#{$prefix}fw",
-    "values": (
-      "wrap": wrap,
-      "nowrap": nowrap,
-      "wrap-reverse": wrap-reverse,
-    )
-  ),
-  "align-items": (
-    "prefix": "#{$prefix}align-items",
-    "values": (
-      "center": center,
-      "stretch": stretch,
-      "start": start,
-      "end": end,
-    )
-  ),
-  "justify-content": (
-    "prefix": "#{$prefix}justify-content",
-    "values": (
-      "center": center,
-      "space-between": space-between,
-      "start": start,
-      "space-around": space-around,
-      "space-evenly": space-evenly,
-      "flex-start": flex-start,
-      "flex-end": flex-end,
-    )
-  ),
   "overflow": (
     "prefix": "#{$prefix}overflow",
     "values": (
